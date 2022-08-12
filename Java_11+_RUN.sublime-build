@@ -1,0 +1,16 @@
+{
+	"encoding": "utf-8",
+	"working_dir": "$file_path",
+	"shell_cmd": "java \"${file}\"",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"selector": "source.java",
+
+	"variants":
+	[
+		{   
+			"name": "Java 11+",
+			"shell_cmd": "start cmd /c \" java \"${file}\" & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's Java Compiler! & pause\""
+		},
+
+	]
+}
