@@ -1,0 +1,30 @@
+{
+	"encoding": "utf-8",
+	"working_dir": "$file_path",
+	"shell_cmd": "g++ -Wall -std=c++20 \"${file}\" -o \"${file_path}/${file_base_name}\"",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"selector": "source.c++,source.c",
+
+	"variants":
+	[
+		{   
+			"name": "C++20",
+			"shell_cmd": "g++ -Wall -std=c++20 \"${file}\" -o \"${file_base_name}\"&& start cmd /c \"\"${file_path}/${file_base_name}\" & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's C++20 Compiler! & pause\""
+		},
+
+		{   
+			"name": "C++17",
+			"shell_cmd": "g++ -Wall -std=c++17 \"${file}\" -o \"${file_base_name}\"&& start cmd /c \"\"${file_path}/${file_base_name}\" & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's C++17 Compiler! & pause\""
+		},
+
+		{   
+			"name": "C++14",
+			"shell_cmd": "g++ -Wall -std=c++14 \"${file}\" -o \"${file_base_name}\"&& start cmd /c \"\"${file_path}/${file_base_name}\" & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's C++14 Compiler! & pause\""
+		},
+
+		{   
+			"name": "C++11",
+			"shell_cmd": "g++ -Wall -std=c++11 \"${file}\" -o \"${file_base_name}\"&& start cmd /c \"\"${file_path}/${file_base_name}\" & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's C++11 Compiler! & pause\""
+		}
+	]
+}
