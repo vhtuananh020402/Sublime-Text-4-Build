@@ -1,4 +1,5 @@
 {
+
 	"encoding": "utf-8",
 	"working_dir": "$file_path",
 	"shell_cmd": "java \"${file}\"",
@@ -8,7 +9,12 @@
 	"variants":
 	[
 		{   
-			"name": "Java 11+",
+			"name": "Java 11+ Compile and Run ",
+			"shell_cmd": "start cmd /c \"javac \"${file}\" & java $file_base_name & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's Java 18.0.2 Compiler! & pause\""
+		},
+		
+		{   
+			"name": "Java 11+ Interpret",
 			"shell_cmd": "start cmd /c \" java \"${file}\" & echo. &echo ------------------------------ & echo Successfully compiled from TunaCSE's Java Compiler! & pause\""
 		},
 
